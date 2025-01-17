@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Request History</h1>
+    <div class="requests">
+        {% for req in requests %}
+            <div class="request">
+                <p><strong>Prompt:</strong> {{ req.prompt }}</p>
+                <img src="{{ url_for('view_image', filename=os.path.basename(req.image_path)) }}" alt="Generated Image">
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Image Generator</h1>
+    <form action="{{ url_for('generate') }}" method="POST">
+        <textarea name="prompt" placeholder="Enter your prompt here..." required></textarea>
+        <button type="submit">Generate Image</button>
+    </form>
+{% endblock %}
