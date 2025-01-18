@@ -1,5 +1,4 @@
 flask-sqlalchemy 
-Flask
 torch
 diffusers
 gunicorn
